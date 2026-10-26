@@ -1,86 +1,333 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#09291f">
-  <meta name="description" content="Explore the real PharmaOneBD Android app: offline pharmacy billing, interactive shelves, OCR-assisted stock entry, Bengali voice commands, reports and more.">
-  <meta property="og:title" content="PharmaOneBD — Made for the rhythm of your pharmacy">
-  <meta property="og:description" content="Real app screens. Offline billing, interactive shelves, smart assistance and complete pharmacy operations in one app.">
-  <meta property="og:type" content="website">
-  <title>PharmaOneBD — Pharmacy POS for Bangladesh</title>
-  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Hind+Siliguri:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="./enhancements.css">
-  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
-  <script defer src="./script.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PharmaOneBD | Pharmacy POS for Bangladesh</title>
+<meta name="description" content="Offline pharmacy billing, expiry-aware stock, interactive shelves and 25 reports. PharmaOneBD runs on any Android phone and is built for Bangladeshi pharmacies.">
+<meta name="theme-color" content="#08120e">
+<meta property="og:title" content="PharmaOneBD | Every shelf. Every sale. In sync.">
+<meta property="og:description" content="Offline billing, expiry-aware stock and 25 reports for Bangladeshi pharmacies.">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Hind+Siliguri:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="css/site.css">
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <div class="announcement"><span class="signal"></span><span data-en="Made for the pharmacies that keep Bangladesh moving" data-bn="বাংলাদেশের প্রতিদিনের ফার্মেসির জন্য তৈরি">Made for the pharmacies that keep Bangladesh moving</span><span class="announcement-star">✳</span><span data-en="Built to work offline" data-bn="ইন্টারনেট ছাড়াও কাজ করে">Built to work offline</span></div>
-  <header class="site-header" id="top">
-    <a class="brand" href="#top" aria-label="PharmaOneBD home"><span class="brand-mark"><span>+</span></span><span>pharma<span class="brand-one">one</span><span class="brand-bd">bd</span></span></a>
-    <nav class="desktop-nav" aria-label="Main navigation"><a href="#screens" data-en="Screens" data-bn="স্ক্রিন">Screens</a><a href="#shelves" data-en="Shelves" data-bn="শেলফ">Shelves</a><a href="#ai" data-en="Smart tools" data-bn="স্মার্ট টুল">Smart tools</a><a href="#pricing" data-en="Pricing" data-bn="মূল্য">Pricing</a><a href="#faq" data-en="FAQ" data-bn="প্রশ্নোত্তর">FAQ</a></nav>
-    <div class="header-actions"><button id="language-toggle" class="language-toggle" type="button" aria-label="Switch to Bangla">বাংলা <span aria-hidden="true">↗</span></button><a class="header-cta" href="#pricing"><span data-en="Get started" data-bn="শুরু করুন">Get started</span><span aria-hidden="true">↗</span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span></span><span></span></button></div>
-  </header>
-  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" hidden><a href="#screens" data-en="Screens" data-bn="স্ক্রিন">Screens</a><a href="#shelves" data-en="Shelves" data-bn="শেলফ">Shelves</a><a href="#ai" data-en="Smart tools" data-bn="স্মার্ট টুল">Smart tools</a><a href="#features" data-en="Features" data-bn="ফিচার">Features</a><a href="#pricing" data-en="Pricing" data-bn="মূল্য">Pricing</a><a href="#faq" data-en="FAQ" data-bn="প্রশ্নোত্তর">FAQ</a></nav>
+<body data-page="home">
+<main id="main">
 
-  <main id="main">
-    <section class="hero section-pad" aria-labelledby="hero-title">
-      <div class="hero-grid wrap">
-        <div class="hero-copy">
-          <div class="eyebrow"><span class="eyebrow-line"></span><span data-en="The pharmacy operating system, made for Bangladesh" data-bn="বাংলাদেশের ফার্মেসির জন্য তৈরি">The pharmacy operating system, made for Bangladesh</span></div>
-          <h1 id="hero-title"><span data-en="Every shelf." data-bn="প্রতিটি শেলফ।">Every shelf.</span><br><em data-en="Every sale." data-bn="প্রতিটি বিক্রি।">Every sale.</em><br><span data-en="In sync." data-bn="একসঙ্গে।">In sync.</span></h1>
-          <p class="hero-lead" data-en="The counter moves fast. PharmaOneBD keeps up—offline billing, medicine search, live stock, smart shelves, dues and reports in one Android app." data-bn="কাউন্টারের কাজ চলে দ্রুত। PharmaOneBD রাখে তাল—অফলাইন বিলিং, ওষুধ সার্চ, স্টক, স্মার্ট শেলফ, বাকি ও রিপোর্ট এক অ্যান্ড্রয়েড অ্যাপে।">The counter moves fast. PharmaOneBD keeps up—offline billing, medicine search, live stock, smart shelves, dues and reports in one Android app.</p>
-          <div class="hero-actions"><a class="button button-primary" href="#screens"><span data-en="Explore the real app" data-bn="আসল অ্যাপটি দেখুন">Explore the real app</span><span aria-hidden="true">↗</span></a><a class="button button-outline" href="#ai"><span data-en="Discover smart tools" data-bn="স্মার্ট টুল দেখুন">Discover smart tools</span><span aria-hidden="true">↓</span></a></div>
-          <div class="hero-proof"><span class="proof-dot"></span><span data-en="Real screens from the Android app" data-bn="অ্যান্ড্রয়েড অ্যাপের আসল স্ক্রিন">Real screens from the Android app</span><span class="proof-sep">/</span><span data-en="Bangla first, offline ready" data-bn="বাংলা বান্ধব, অফলাইন-প্রস্তুত">Bangla first, offline ready</span></div>
-        </div>
-        <div class="hero-art hero-art-real" aria-label="Actual PharmaOneBD Android app screens">
-          <div class="art-halo halo-one"></div><div class="art-halo halo-two"></div>
-          <div class="hero-phone phone-back"><img class="phone-image" src="./assets/screens/stock.png" alt="Actual stock management screen showing medicines and stock alerts" loading="lazy" width="1280" height="2856"></div>
-          <div class="hero-phone phone-front"><img class="phone-image" src="./assets/screens/dashboard.png" alt="Actual PharmaOneBD dashboard with sales, low stock and quick links" loading="lazy" width="1280" height="2856"></div>
-          <div class="floating-tag tag-top"><span class="tag-icon orange">▧</span><span><strong data-en="Know what needs attention" data-bn="জরুরি কাজ আগে দেখুন">Know what needs attention</strong><small data-en="Stock and expiry at a glance" data-bn="স্টক ও মেয়াদ এক নজরে">Stock and expiry at a glance</small></span></div>
-          <div class="floating-tag tag-bottom"><span class="tag-icon green">✓</span><span><strong data-en="Built around your day" data-bn="আপনার প্রতিদিনের জন্য">Built around your day</strong><small data-en="Counter to report" data-bn="কাউন্টার থেকে রিপোর্ট">Counter to report</small></span></div>
-          <span class="art-spark spark-one">✳</span><span class="art-spark spark-two">✦</span>
+<!-- hero -->
+<section class="hero" aria-labelledby="hero-title">
+  <canvas id="hero-3d" aria-hidden="true"></canvas>
+  <div class="wrap hero__grid">
+    <div>
+      <h1 id="hero-title" class="display">
+        <span class="lnw"><span class="ln" data-en="Every shelf. Every sale." data-bn="প্রতিটি শেলফ। প্রতিটি বিক্রি।">Every shelf. Every sale.</span></span>
+        <span class="lnw"><em class="ln" data-en="In sync." data-bn="একসঙ্গে।">In sync.</em></span>
+      </h1>
+      <p class="lede" data-en="Offline billing, expiry-aware stock and 25 reports, built for Bangladeshi pharmacies. Works on any Android phone." data-bn="অফলাইন বিলিং, মেয়াদসচেতন স্টক ও ২৫টি রিপোর্ট, বাংলাদেশের ফার্মেসির জন্য। যেকোনো অ্যান্ড্রয়েড ফোনে চলে।">Offline billing, expiry-aware stock and 25 reports, built for Bangladeshi pharmacies. Works on any Android phone.</p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="#download"><i class="ph ph-android-logo" aria-hidden="true"></i><span data-en="Download for Android" data-bn="অ্যান্ড্রয়েডে ডাউনলোড">Download for Android</span></a>
+        <a class="btn btn--ghost" href="features.html"><span data-en="See all features" data-bn="সব ফিচার দেখুন">See all features</span><i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <div class="hero__phones">
+      <div class="phone phone--a"><img src="assets/screens/dashboard.png" alt="PharmaOneBD dashboard showing today's bills, sales and payment split" width="404" height="864" fetchpriority="high"></div>
+      <div class="phone phone--b"><img src="assets/screens/stock.png" alt="Stock management screen with expiry filters and price per piece" width="404" height="864"></div>
+    </div>
+  </div>
+</section>
+
+<!-- facts -->
+<section class="facts" aria-label="Facts">
+  <div class="wrap facts__row">
+    <div class="fact"><b data-count="19957">19,957</b><span data-en="Bangladeshi medicines preloaded, offline" data-bn="বাংলাদেশি ওষুধ আগে থেকেই লোড, অফলাইনে">Bangladeshi medicines preloaded, offline</span></div>
+    <div class="fact"><b data-count="25">25</b><span data-en="reports inside the app" data-bn="অ্যাপের ভেতরেই রিপোর্ট">reports inside the app</span></div>
+    <div class="fact"><b data-count="4">4</b><span data-en="payment methods: cash, bKash, Nagad, credit" data-bn="পেমেন্ট মাধ্যম: ক্যাশ, বিকাশ, নগদ, বাকি">payment methods: cash, bKash, Nagad, credit</span></div>
+    <div class="fact"><b data-count="4">4</b><span data-en="staff roles, from owner to counter" data-bn="স্টাফ ভূমিকা, মালিক থেকে কাউন্টার">staff roles, from owner to counter</span></div>
+  </div>
+</section>
+
+<!-- experience: chapters with a sticky phone -->
+<section class="showcase" id="experience" aria-labelledby="exp-title">
+  <div class="wrap">
+    <h2 id="exp-title" class="h2 rv" data-en="Built around the counter, not the office." data-bn="অফিস নয়, কাউন্টারকে ঘিরে তৈরি।">Built around the counter, not the office.</h2>
+    <div class="showcase__grid">
+      <div class="chapters">
+        <article class="chapter">
+          <h3 data-en="Your whole day on one screen." data-bn="পুরো দিনের হিসাব এক স্ক্রিনে।">Your whole day on one screen.</h3>
+          <p data-en="Bills, sales, cash, bKash, Nagad and credit at a glance. Low stock and expiry warnings sit right below." data-bn="বিল, বিক্রি, ক্যাশ, বিকাশ, নগদ ও বাকি এক নজরে। কম স্টক ও মেয়াদের সতর্কতা ঠিক নিচেই।">Bills, sales, cash, bKash, Nagad and credit at a glance. Low stock and expiry warnings sit right below.</p>
+          <ul>
+            <li><i class="ph ph-check" aria-hidden="true"></i><span data-en="Today's summary by payment method" data-bn="পেমেন্ট মাধ্যম অনুযায়ী আজকের সারাংশ">Today's summary by payment method</span></li>
+            <li><i class="ph ph-check" aria-hidden="true"></i><span data-en="One-tap tiles for sales, stock and customers" data-bn="বিক্রি, স্টক ও কাস্টমারের জন্য এক ট্যাপের টাইল">One-tap tiles for sales, stock and customers</span></li>
+          </ul>
+        </article>
+        <article class="chapter">
+          <h3 data-en="Stock that knows its expiry." data-bn="স্টক জানে তার মেয়াদ।">Stock that knows its expiry.</h3>
+          <p data-en="Search 19,957 medicines, filter by 30, 60 or 90 days, and see the price per piece." data-bn="১৯,৯৫৭ ওষুধ সার্চ করুন, ৩০, ৬০ বা ৯০ দিনে ফিল্টার করুন, প্রতি পিসের দাম দেখুন।">Search 19,957 medicines, filter by 30, 60 or 90 days, and see the price per piece.</p>
+          <ul>
+            <li><i class="ph ph-check" aria-hidden="true"></i><span data-en="Low stock and expiring tabs" data-bn="কম স্টক ও মেয়াদোত্তীর্ণ ট্যাব">Low stock and expiring tabs</span></li>
+            <li><i class="ph ph-check" aria-hidden="true"></i><span data-en="Scan a package with OCR" data-bn="OCR দিয়ে প্যাকেজ স্ক্যান">Scan a package with OCR</span></li>
+          </ul>
+        </article>
+        <article class="chapter">
+          <h3 data-en="Add stock in a few taps." data-bn="কয়েক ট্যাপে স্টক যোগ।">Add stock in a few taps.</h3>
+          <p data-en="Pick the medicine and supplier, then add batch, quantity, cost and expiry. Stock and dues update together." data-bn="ওষুধ ও সরবরাহকারী বেছে ব্যাচ, পরিমাণ, দাম ও মেয়াদ দিন। স্টক ও বকেয়া একসাথে আপডেট হয়।">Pick the medicine and supplier, then add batch, quantity, cost and expiry. Stock and dues update together.</p>
+          <ul>
+            <li><i class="ph ph-check" aria-hidden="true"></i><span data-en="Batch number and expiry date" data-bn="ব্যাচ নম্বর ও মেয়াদের তারিখ">Batch number and expiry date</span></li>
+            <li><i class="ph ph-check" aria-hidden="true"></i><span data-en="Barcode scan while you record" data-bn="লেখার সময় বারকোড স্ক্যান">Barcode scan while you record</span></li>
+          </ul>
+        </article>
+        <article class="chapter">
+          <h3 data-en="Reports that answer real questions." data-bn="প্রকৃত প্রশ্নের উত্তর দেয় যে রিপোর্ট।">Reports that answer real questions.</h3>
+          <p data-en="Galla, best sellers, profit, dead stock and expiry loss, 25 reports in all." data-bn="গাল্লা, বেস্ট সেলিং, লাভ, ডেড স্টক ও মেয়াদোত্তীর্ণ ক্ষতি, মোট ২৫টি রিপোর্ট।">Galla, best sellers, profit, dead stock and expiry loss, 25 reports in all.</p>
+          <ul>
+            <li><i class="ph ph-check" aria-hidden="true"></i><span data-en="Bangla names, plain explanations" data-bn="বাংলা নাম, সহজ ব্যাখ্যা">Bangla names, plain explanations</span></li>
+            <li><i class="ph ph-check" aria-hidden="true"></i><span data-en="Export to PDF" data-bn="পিডিএফে এক্সপোর্ট">Export to PDF</span></li>
+          </ul>
+        </article>
+      </div>
+      <div class="stage" aria-hidden="true">
+        <div class="phone">
+          <img src="assets/screens/dashboard.png" alt="" width="404" height="864">
+          <img src="assets/screens/stock.png" alt="" width="404" height="864" loading="lazy">
+          <img src="assets/screens/stock-entry.png" alt="" width="404" height="864" loading="lazy">
+          <img src="assets/screens/reports.png" alt="" width="404" height="864" loading="lazy">
         </div>
       </div>
-      <div class="hero-bottom wrap"><span data-en="ACTUAL ANDROID APP / PRODUCT PREVIEW" data-bn="আসল অ্যান্ড্রয়েড অ্যাপ / প্রোডাক্ট প্রিভিউ">ACTUAL ANDROID APP / PRODUCT PREVIEW</span><a href="#screens" aria-label="Scroll to app screens">↓</a><span>01 / 07</span></div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section class="marquee" aria-label="Key capabilities"><div class="marquee-track"><span>FAST BILLING <i>✳</i> খুচরা বিক্রি <i>✳</i> OFFLINE FIRST <i>✳</i> EXPIRY ALERTS <i>✳</i> বাকি হিসাব <i>✳</i> CLEAR REPORTS <i>✳</i> FAST BILLING <i>✳</i> খুচরা বিক্রি <i>✳</i> OFFLINE FIRST <i>✳</i> EXPIRY ALERTS <i>✳</i> বাকি হিসাব <i>✳</i> CLEAR REPORTS <i>✳</i></span></div></section>
+<!-- a day at the pharmacy: pinned horizontal story -->
+<section class="day" id="day" aria-labelledby="day-title">
+  <div class="wrap day__head">
+    <p class="eyebrow rv" data-en="A day at the pharmacy" data-bn="ফার্মেসির একটি দিন">A day at the pharmacy</p>
+    <h2 id="day-title" class="h2 rv" style="margin-top:.8rem" data-en="From the first shutter to the last taka." data-bn="দোকান খোলা থেকে দিনের শেষ টাকা পর্যন্ত।">From the first shutter to the last taka.</h2>
+  </div>
+  <div class="day__pin">
+    <div class="day__track">
+      <article class="moment">
+        <div><time>09:00</time><h3 data-en="Check the shelf before the first customer." data-bn="প্রথম কাস্টমারের আগে শেলফ দেখে নিন।">Check the shelf before the first customer.</h3><p data-en="The dashboard flags low stock and batches expiring this week, so nothing surprises you at the counter." data-bn="ড্যাশবোর্ড কম স্টক ও এ সপ্তাহে মেয়াদ শেষ হবে এমন ব্যাচ দেখায়, কাউন্টারে কোনো চমক থাকে না।">The dashboard flags low stock and batches expiring this week, so nothing surprises you at the counter.</p></div>
+        <div class="phone"><img src="assets/screens/dashboard2.png" alt="Dashboard alerts for low stock and expiring batches" width="404" height="864" loading="lazy"></div>
+      </article>
+      <article class="moment" style="grid-template-columns:1fr">
+        <div><time>12:30</time><h3 data-en="Serve the lunch rush at counter speed." data-bn="দুপুরের ভিড় সামলান কাউন্টারের গতিতে।">Serve the lunch rush at counter speed.</h3><p data-en="Search in Bangla or English, sell a single tablet from a strip, take cash, bKash or Nagad, and hold one cart while you serve the next customer. No internet needed." data-bn="বাংলা বা ইংরেজিতে সার্চ করুন, স্ট্রিপ থেকে একটি ট্যাবলেট বিক্রি করুন, ক্যাশ, বিকাশ বা নগদ নিন, এক কার্ট হোল্ড রেখে পরের কাস্টমারকে দিন। ইন্টারনেট লাগে না।">Search in Bangla or English, sell a single tablet from a strip, take cash, bKash or Nagad, and hold one cart while you serve the next customer. No internet needed.</p></div>
+      </article>
+      <article class="moment">
+        <div><time>15:00</time><h3 data-en="Receive stock from the supplier." data-bn="সরবরাহকারীর মাল গ্রহণ।">Receive stock from the supplier.</h3><p data-en="Record the batch, quantity, cost and expiry. Ordered 50 and got 40? Track the gap." data-bn="ব্যাচ, পরিমাণ, দাম ও মেয়াদ লিখুন। ৫০ অর্ডার, ৪০ পেলেন? পার্থক্য ট্র্যাক করুন।">Record the batch, quantity, cost and expiry. Ordered 50 and got 40? Track the gap.</p></div>
+        <div class="phone"><img src="assets/screens/stock-entry.png" alt="Stock entry form with batch, quantity, cost and expiry" width="404" height="864" loading="lazy"></div>
+      </article>
+      <article class="moment">
+        <div><time>17:30</time><h3 data-en="Collect the baki, politely." data-bn="ভদ্রভাবে বাকি আদায় করুন।">Collect the baki, politely.</h3><p data-en="Every customer's due in one list, with reminders in Bangla and a bKash or Nagad link." data-bn="প্রতিটি কাস্টমারের বাকি এক তালিকায়, বাংলায় রিমাইন্ডার ও বিকাশ বা নগদ লিংকসহ।">Every customer's due in one list, with reminders in Bangla and a bKash or Nagad link.</p></div>
+        <div class="phone"><img src="assets/screens/customer.png" alt="Customer list with a filter for customers who owe" width="404" height="864" loading="lazy"></div>
+      </article>
+      <article class="moment">
+        <div><time>21:00</time><h3 data-en="Close the day with the Galla." data-bn="গাল্লা দিয়ে দিন শেষ করুন।">Close the day with the Galla.</h3><p data-en="Cash in hand, digital payments and pending baki on one screen, with a closing reminder." data-bn="হাতে নগদ, ডিজিটাল পেমেন্ট ও বাকি এক স্ক্রিনে, সাথে দিনশেষের রিমাইন্ডার।">Cash in hand, digital payments and pending baki on one screen, with a closing reminder.</p></div>
+        <div class="phone"><img src="assets/screens/reports.png" alt="Reports list including the end-of-day Galla" width="404" height="864" loading="lazy"></div>
+      </article>
+    </div>
+  </div>
+</section>
 
-    <section class="why section-pad" id="why"><div class="wrap why-grid"><div><span class="kicker light">01 / THE IDEA</span><h2 data-en="A calmer counter. A clearer business." data-bn="কাউন্টারে স্বস্তি। ব্যবসায় স্পষ্টতা।">A calmer counter.<br>A clearer business.</h2></div><div class="why-right"><div class="asterisk">✳</div><p data-en="A pharmacy day is full of little decisions. What is in stock? What expires next? Who still owes you? PharmaOneBD puts the answers where your team needs them—right at the counter." data-bn="ফার্মেসির প্রতিদিনেই ছোট ছোট সিদ্ধান্ত। স্টকে কী আছে? কোন ওষুধের মেয়াদ শেষ হচ্ছে? কার কাছে বাকি? PharmaOneBD উত্তরগুলো রাখে আপনার টিমের হাতের কাছেই—কাউন্টারে।">A pharmacy day is full of little decisions. What is in stock? What expires next? Who still owes you? PharmaOneBD puts the answers where your team needs them—right at the counter.</p><a href="#features" class="text-link light-link"><span data-en="Discover the details" data-bn="বিস্তারিত দেখুন">Discover the details</span> ↗</a></div></div><div class="why-orbit" aria-hidden="true"></div></section>
+<!-- modules -->
+<section class="pad" id="modules" aria-labelledby="mod-title">
+  <div class="wrap">
+    <div class="intro">
+      <h2 id="mod-title" class="h2 rv" data-en="Twelve modules. One app." data-bn="বারোটি মডিউল। একটি অ্যাপ।">Twelve modules. One app.</h2>
+      <p class="lede rv" data-en="Everything a pharmacy does in a day, from the first sale to the inspector's visit." data-bn="ফার্মেসির দিনের সব কাজ, প্রথম বিক্রি থেকে পরিদর্শকের আগমন পর্যন্ত।">Everything a pharmacy does in a day, from the first sale to the inspector's visit.</p>
+    </div>
+    <div class="bento">
+      <a class="cell cell--a cell--shot rv" href="features.html#counter">
+        <div class="txt"><i class="ph ph-cash-register" aria-hidden="true"></i></div>
+        <div class="txt"><h3 data-en="Sales counter" data-bn="সেলস কাউন্টার">Sales counter</h3><p data-en="Loose-unit selling, Bangla search, hold and resume, voice commands." data-bn="খুচরা বিক্রি, বাংলা সার্চ, হোল্ড ও রিজিউম, ভয়েস কমান্ড।">Loose-unit selling, Bangla search, hold and resume, voice commands.</p><span class="count" data-en="17 features" data-bn="১৭টি ফিচার">17 features</span></div>
+        <img src="assets/screens/dashboard.png" alt="" width="404" height="864" loading="lazy">
+      </a>
+      <a class="cell cell--b rv" href="features.html#inventory">
+        <i class="ph ph-package" aria-hidden="true"></i>
+        <div><h3 data-en="Inventory" data-bn="ইনভেন্টরি">Inventory</h3><p data-en="Pill-level stock, FEFO deduction, batches and expiry heatmap." data-bn="পিল পর্যায়ের স্টক, FEFO কর্তন, ব্যাচ ও মেয়াদ হিটম্যাপ।">Pill-level stock, FEFO deduction, batches and expiry heatmap.</p><span class="count" data-en="13 features" data-bn="১৩টি ফিচার">13 features</span></div>
+      </a>
+      <a class="cell cell--c rv" href="features.html#medicines">
+        <i class="ph ph-pill" aria-hidden="true"></i>
+        <div><h3 data-en="Medicine database" data-bn="ওষুধের ডাটাবেস">Medicine database</h3><p data-en="19,957 Bangladeshi medicines ready on first launch." data-bn="প্রথম চালুতেই ১৯,৯৫৭ বাংলাদেশি ওষুধ।">19,957 Bangladeshi medicines ready on first launch.</p><span class="count" data-en="7 features" data-bn="৭টি ফিচার">7 features</span></div>
+      </a>
+      <a class="cell cell--d rv" href="features.html#ledger">
+        <i class="ph ph-notebook" aria-hidden="true"></i>
+        <div><h3 data-en="Customer ledger" data-bn="কাস্টমার খাতা">Customer ledger</h3><p data-en="Baki khata with reminders, history and quick reorder." data-bn="রিমাইন্ডার, ইতিহাস ও দ্রুত রিঅর্ডারসহ বাকি খাতা।">Baki khata with reminders, history and quick reorder.</p><span class="count" data-en="8 features" data-bn="৮টি ফিচার">8 features</span></div>
+      </a>
+      <a class="cell cell--e rv" href="features.html#suppliers">
+        <i class="ph ph-truck" aria-hidden="true"></i>
+        <div><h3 data-en="Suppliers and purchases" data-bn="সরবরাহকারী ও ক্রয়">Suppliers and purchases</h3><p data-en="Dues, partial receiving, invoice photos, price comparison." data-bn="বকেয়া, আংশিক গ্রহণ, চালানের ছবি, দাম তুলনা।">Dues, partial receiving, invoice photos, price comparison.</p><span class="count" data-en="9 features" data-bn="৯টি ফিচার">9 features</span></div>
+      </a>
+      <a class="cell cell--f rv" href="features.html#billing">
+        <i class="ph ph-receipt" aria-hidden="true"></i>
+        <div><h3 data-en="Billing" data-bn="বিলিং">Billing</h3><p data-en="Thermal, PDF and WhatsApp receipts." data-bn="থার্মাল, পিডিএফ ও হোয়াটসঅ্যাপ রিসিট।">Thermal, PDF and WhatsApp receipts.</p><span class="count" data-en="6 features" data-bn="৬টি ফিচার">6 features</span></div>
+      </a>
+      <a class="cell cell--g rv" href="features.html#cloud">
+        <i class="ph ph-cloud-arrow-up" aria-hidden="true"></i>
+        <div><h3 data-en="Cloud and branches" data-bn="ক্লাউড ও শাখা">Cloud and branches</h3><p data-en="Offline first, backed up when you are online, with stock transfer between branches and one owner dashboard." data-bn="আগে অফলাইন, অনলাইনে ব্যাকআপ, শাখার মধ্যে স্টক ট্রান্সফার ও একটি মালিকের ড্যাশবোর্ড।">Offline first, backed up when you are online, with stock transfer between branches and one owner dashboard.</p><span class="count" data-en="7 features" data-bn="৭টি ফিচার">7 features</span></div>
+      </a>
+      <a class="cell cell--h rv" href="features.html#scan">
+        <i class="ph ph-scan" aria-hidden="true"></i>
+        <div><h3 data-en="Scan and voice" data-bn="স্ক্যান ও ভয়েস">Scan and voice</h3><p data-en="Camera barcodes, prescription OCR, Bengali voice entry." data-bn="ক্যামেরা বারকোড, প্রেসক্রিপশন OCR, বাংলা ভয়েস এন্ট্রি।">Camera barcodes, prescription OCR, Bengali voice entry.</p><span class="count" data-en="5 features" data-bn="৫টি ফিচার">5 features</span></div>
+      </a>
+    </div>
+    <p class="rv" style="margin-top:1.6rem;color:var(--muted)">
+      <span data-en="Also in the app:" data-bn="অ্যাপে আরও আছে:">Also in the app:</span>
+      <a href="features.html#staff" style="color:var(--text);text-decoration:underline;text-underline-offset:4px" data-en="Staff and shifts" data-bn="স্টাফ ও শিফট">Staff and shifts</a>,
+      <a href="features.html#alerts" style="color:var(--text);text-decoration:underline;text-underline-offset:4px" data-en="Alerts and reminders" data-bn="অ্যালার্ট ও রিমাইন্ডার">Alerts and reminders</a>,
+      <a href="features.html#compliance" style="color:var(--text);text-decoration:underline;text-underline-offset:4px" data-en="Compliance" data-bn="কমপ্লায়েন্স">Compliance</a>,
+      <a href="features.html#admin" style="color:var(--text);text-decoration:underline;text-underline-offset:4px" data-en="Admin console" data-bn="অ্যাডমিন কনসোল">Admin console</a>.
+    </p>
+    <div class="rv" style="margin-top:2rem"><a class="btn btn--ghost" href="features.html"><span data-en="Browse all 94 features" data-bn="সব ৯৪টি ফিচার দেখুন">Browse all 94 features</span><i class="ph ph-arrow-right" aria-hidden="true"></i></a></div>
+  </div>
+</section>
 
-    <section class="screens section-pad" id="screens">
-      <div class="wrap"><div class="section-intro"><div><span class="kicker">02 / INSIDE THE APP</span><h2 data-en="Real screens. Real work." data-bn="আসল স্ক্রিন। বাস্তব কাজ।">Real screens.<br>Real work.</h2></div><p data-en="Take a closer look at the Android experience your team will use every day." data-bn="আপনার টিম প্রতিদিন যে অ্যান্ড্রয়েড অ্যাপ ব্যবহার করবে, সেটিই দেখুন।">Take a closer look at the Android experience your team will use every day.</p></div>
-        <div class="screen-gallery" aria-label="App screen gallery">
-          <div class="gallery-copy"><div class="gallery-counter"><span id="gallery-current">01</span> / 05</div><div class="gallery-item"><span class="gallery-overline" data-en="THE OVERVIEW" data-bn="এক নজরে">THE OVERVIEW</span><h3 id="gallery-title" data-en="A clearer start to every day." data-bn="প্রতিদিনের সহজ শুরু।">A clearer start to every day.</h3><p id="gallery-description" data-en="Bills, sales, payment mix and urgent alerts live together on your dashboard." data-bn="বিল, বিক্রি, পেমেন্টের হিসাব ও জরুরি সতর্কতা—সব ড্যাশবোর্ডে।">Bills, sales, payment mix and urgent alerts live together on your dashboard.</p></div><div class="gallery-controls"><button type="button" class="gallery-prev" aria-label="Previous screen">←</button><button type="button" class="gallery-next" aria-label="Next screen">→</button></div><div class="gallery-progress"><span></span></div><div class="gallery-thumbs" role="tablist" aria-label="Choose an app screen"><button class="gallery-thumb active" type="button" role="tab" aria-selected="true" data-screen="dashboard" data-index="0"><span>01</span><span data-en="Dashboard" data-bn="ড্যাশবোর্ড">Dashboard</span></button><button class="gallery-thumb" type="button" role="tab" aria-selected="false" data-screen="stock" data-index="1"><span>02</span><span data-en="Inventory" data-bn="স্টক">Inventory</span></button><button class="gallery-thumb" type="button" role="tab" aria-selected="false" data-screen="reports" data-index="2"><span>03</span><span data-en="Reports" data-bn="রিপোর্ট">Reports</span></button><button class="gallery-thumb" type="button" role="tab" aria-selected="false" data-screen="shelves" data-index="3"><span>04</span><span data-en="Shelves" data-bn="শেলফ">Shelves</span></button><button class="gallery-thumb" type="button" role="tab" aria-selected="false" data-screen="settings" data-index="4"><span>05</span><span data-en="Settings" data-bn="সেটিংস">Settings</span></button></div></div>
-          <div class="gallery-stage"><div class="gallery-ring"></div><div class="gallery-phone"><img class="gallery-image" src="./assets/screens/dashboard.png" alt="Actual PharmaOneBD dashboard screen" loading="lazy" width="1280" height="2856"></div><span class="gallery-caption" data-en="CAPTURED FROM THE ANDROID APP" data-bn="অ্যান্ড্রয়েড অ্যাপ থেকে ধারণ করা">CAPTURED FROM THE ANDROID APP</span></div>
+<!-- reports teaser -->
+<section class="pad" id="reports" style="padding-top:0" aria-labelledby="rep-title">
+  <div class="wrap reports-tease">
+    <div class="reports-tease__phones rv" aria-hidden="true">
+      <div class="phone phone--a"><img src="assets/screens/report2.png" alt="" width="404" height="864" loading="lazy"></div>
+      <div class="phone phone--b"><img src="assets/screens/reports.png" alt="" width="404" height="864" loading="lazy"></div>
+    </div>
+    <div>
+      <p class="eyebrow rv" data-en="Reports" data-bn="রিপোর্ট">Reports</p>
+      <h2 id="rep-title" class="h2 rv" style="margin-top:.8rem" data-en="Know your numbers without a spreadsheet." data-bn="স্প্রেডশিট ছাড়াই নিজের হিসাব জানুন।">Know your numbers without a spreadsheet.</h2>
+      <p class="lede rv" data-en="Twenty-five reports across sales, stock, customers, staff and compliance." data-bn="বিক্রি, স্টক, কাস্টমার, স্টাফ ও কমপ্লায়েন্স জুড়ে পঁচিশটি রিপোর্ট।">Twenty-five reports across sales, stock, customers, staff and compliance.</p>
+      <ol class="rv">
+        <li><span data-en="End-of-day Galla" data-bn="গাল্লা (দিনশেষ)">End-of-day Galla</span><span data-en="Cash, digital and pending baki" data-bn="নগদ, ডিজিটাল ও বাকি">Cash, digital and pending baki</span></li>
+        <li><span data-en="Profit analysis" data-bn="লাভ বিশ্লেষণ">Profit analysis</span><span data-en="Per medicine, buy against sell" data-bn="ওষুধ প্রতি, কেনা বনাম বেচা">Per medicine, buy against sell</span></li>
+        <li><span data-en="Best sellers" data-bn="বেস্ট সেলিং">Best sellers</span><span data-en="What moves fastest" data-bn="কোনটা সবচেয়ে দ্রুত বিক্রি হয়">What moves fastest</span></li>
+        <li><span data-en="Expiry loss" data-bn="মেয়াদোত্তীর্ণ ক্ষতি">Expiry loss</span><span data-en="Value of expired stock" data-bn="মেয়াদ শেষ স্টকের মূল্য">Value of expired stock</span></li>
+        <li><span data-en="Dead stock" data-bn="ডেড স্টক">Dead stock</span><span data-en="Nothing sold in 30 days" data-bn="৩০ দিনে বিক্রি হয়নি">Nothing sold in 30 days</span></li>
+        <li><span data-en="Customer dues" data-bn="বাকি রিপোর্ট">Customer dues</span><span data-en="Who owes what" data-bn="কার কত বাকি">Who owes what</span></li>
+      </ol>
+      <div class="rv" style="margin-top:1.8rem"><a class="btn btn--primary" href="reports.html"><span data-en="See all 25 reports" data-bn="সব ২৫টি রিপোর্ট দেখুন">See all 25 reports</span><i class="ph ph-arrow-right" aria-hidden="true"></i></a></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3D shelves -->
+<section class="shelf pad" id="shelves" aria-labelledby="shelf-title">
+  <div class="wrap shelf__grid">
+    <div>
+      <h2 id="shelf-title" class="h2 rv" data-en="Know where every strip sits." data-bn="প্রতিটি স্ট্রিপ কোথায় আছে জানুন।">Know where every strip sits.</h2>
+      <p class="lede rv" data-en="Map medicines to Zone, Aisle, Shelf and Bin. Colours show expiry, so you always pick the oldest stock first." data-bn="ওষুধকে জোন, আইল, শেলফ ও বিনে ম্যাপ করুন। রঙ দেখায় মেয়াদ, তাই সবসময় পুরোনো স্টক আগে তুলুন।">Map medicines to Zone, Aisle, Shelf and Bin. Colours show expiry, so you always pick the oldest stock first.</p>
+      <div class="legend rv" role="group" aria-label="Filter by expiry">
+        <button type="button" aria-pressed="true" data-state="fresh" style="--c:#34d399"><span class="sw"></span><span data-en="Fresh" data-bn="ঠিক আছে">Fresh</span></button>
+        <button type="button" aria-pressed="true" data-state="d90" style="--c:#f5b342"><span class="sw"></span><span data-en="Under 90 days" data-bn="৯০ দিনের কম">Under 90 days</span></button>
+        <button type="button" aria-pressed="true" data-state="d30" style="--c:#fb7185"><span class="sw"></span><span data-en="Under 30 days" data-bn="৩০ দিনের কম">Under 30 days</span></button>
+        <button type="button" aria-pressed="true" data-state="expired" style="--c:#9f1239"><span class="sw"></span><span data-en="Expired" data-bn="মেয়াদোত্তীর্ণ">Expired</span></button>
+      </div>
+      <p class="shelf__note" data-en="Sample layout with generated batches. Drag to rotate, hover or tap a box for details." data-bn="নমুনা সাজানো, ব্যাচ তৈরি করা। ঘোরাতে টানুন, বিস্তারিত দেখতে বক্সে হোভার বা ট্যাপ করুন।">Sample layout with generated batches. Drag to rotate, hover or tap a box for details.</p>
+    </div>
+    <div class="shelf__view rv">
+      <canvas id="shelf-3d" role="img" aria-label="Interactive 3D pharmacy shelf coloured by medicine expiry"></canvas>
+      <div class="tip" id="shelf-tip" role="status"></div>
+    </div>
+  </div>
+</section>
+
+<!-- pricing -->
+<section class="pad" id="pricing" aria-labelledby="price-title">
+  <div class="wrap">
+    <div class="intro">
+      <h2 id="price-title" class="h2 rv" data-en="Room to grow. A plan to match." data-bn="বড় হওয়ার জায়গা। মানানসই প্ল্যান।">Room to grow. A plan to match.</h2>
+      <p class="lede rv" data-en="Start with a 30-day free trial. Every plan works offline and includes setup support." data-bn="৩০ দিনের ফ্রি ট্রায়াল দিয়ে শুরু করুন। প্রতিটি প্ল্যান অফলাইনে চলে ও সেটআপ সহায়তা আছে।">Start with a 30-day free trial. Every plan works offline and includes setup support.</p>
+    </div>
+    <div class="plans">
+      <article class="plan rv">
+        <div><h3>Starter</h3><small data-en="For the everyday counter" data-bn="প্রতিদিনের কাউন্টারের জন্য">For the everyday counter</small></div>
+        <div class="price">৳499 <span data-en="/ month" data-bn="/ মাস">/ month</span></div>
+        <ul>
+          <li data-en="Unlimited billing and loose unit sales" data-bn="সীমাহীন বিলিং ও খুচরা বিক্রি">Unlimited billing and loose unit sales</li>
+          <li data-en="Basic stock tracking, 2 staff accounts" data-bn="মৌলিক স্টক ট্র্যাকিং, ২টি স্টাফ অ্যাকাউন্ট">Basic stock tracking, 2 staff accounts</li>
+          <li data-en="Daily sales summary and PDF receipts" data-bn="দৈনিক বিক্রির সারাংশ ও পিডিএফ রিসিট">Daily sales summary and PDF receipts</li>
+        </ul>
+        <a class="btn btn--ghost" href="https://wa.me/8801729730106?text=I%20want%20to%20start%20PharmaOneBD%20Starter%20trial"><span data-en="Start free trial" data-bn="ফ্রি ট্রায়াল শুরু">Start free trial</span></a>
+      </article>
+      <article class="plan plan--hl rv">
+        <div><h3>Pro</h3><small data-en="The growth favorite" data-bn="বর্ধনশীল ফার্মেসির প্রিয়">The growth favorite</small></div>
+        <div class="price">৳999 <span data-en="/ month" data-bn="/ মাস">/ month</span></div>
+        <ul>
+          <li data-en="Everything in Starter" data-bn="স্টার্টারের সব কিছু">Everything in Starter</li>
+          <li data-en="Expiry and low-stock alerts, customer dues, suppliers, cloud backup" data-bn="মেয়াদ ও কম স্টকের সতর্কতা, কাস্টমার বাকি, সরবরাহকারী, ক্লাউড ব্যাকআপ">Expiry and low-stock alerts, customer dues, suppliers, cloud backup</li>
+          <li data-en="Profit reports and up to 10 staff" data-bn="লাভের রিপোর্ট ও ১০ জন পর্যন্ত স্টাফ">Profit reports and up to 10 staff</li>
+        </ul>
+        <a class="btn btn--primary" href="https://wa.me/8801729730106?text=I%20want%20to%20start%20PharmaOneBD%20Pro%20trial"><span data-en="Start free trial" data-bn="ফ্রি ট্রায়াল শুরু">Start free trial</span></a>
+      </article>
+      <article class="plan rv">
+        <div><h3>Enterprise</h3><small data-en="For multiple branches" data-bn="একাধিক শাখার জন্য">For multiple branches</small></div>
+        <div class="price">৳2,499 <span data-en="/ month" data-bn="/ মাস">/ month</span></div>
+        <ul>
+          <li data-en="Everything in Pro" data-bn="প্রো-র সব কিছু">Everything in Pro</li>
+          <li data-en="Up to 10 branches, stock transfers, central owner dashboard" data-bn="১০টি শাখা পর্যন্ত, স্টক ট্রান্সফার, কেন্দ্রীয় মালিকের ড্যাশবোর্ড">Up to 10 branches, stock transfers, central owner dashboard</li>
+          <li data-en="Unlimited staff and priority support" data-bn="সীমাহীন স্টাফ ও অগ্রাধিকার সহায়তা">Unlimited staff and priority support</li>
+        </ul>
+        <a class="btn btn--ghost" href="https://wa.me/8801729730106"><span data-en="Talk to us" data-bn="কথা বলুন">Talk to us</span></a>
+      </article>
+    </div>
+    <p class="rv" style="margin-top:1.4rem;color:var(--muted);font-size:.92rem" data-en="Prices in BDT. Confirm the latest offer before subscribing." data-bn="দাম টাকায়। সাবস্ক্রাইবের আগে সর্বশেষ অফার নিশ্চিত করুন।">Prices in BDT. Confirm the latest offer before subscribing.</p>
+  </div>
+</section>
+
+<!-- download -->
+<section class="dl pad" id="download" aria-labelledby="dl-title">
+  <div class="wrap">
+    <div class="dl__box" id="release">
+      <div>
+        <p class="eyebrow" data-en="Android" data-bn="অ্যান্ড্রয়েড">Android</p>
+        <h2 id="dl-title" class="h2" style="margin-top:.8rem" data-en="Get the app." data-bn="অ্যাপটি নিন।">Get the app.</h2>
+        <p class="lede" data-en="The latest build, straight from GitHub. Updates arrive inside the app." data-bn="সর্বশেষ বিল্ড সরাসরি GitHub থেকে। আপডেট আসে অ্যাপের ভেতরেই।">The latest build, straight from GitHub. Updates arrive inside the app.</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" data-rel="apk" href="https://github.com/shamimsdp/PharmaOneBD-releases/releases/latest" aria-disabled="true"><i class="ph ph-download-simple" aria-hidden="true"></i><span data-en="Download APK" data-bn="APK ডাউনলোড">Download APK</span></a>
+          <a class="btn btn--ghost" href="https://github.com/shamimsdp/PharmaOneBD-releases/releases"><span data-en="All releases" data-bn="সব রিলিজ">All releases</span></a>
         </div>
+        <div class="dl__meta">
+          <div><span data-en="Version" data-bn="ভার্সন">Version</span>: <b data-rel="tag"><span class="skeleton"></span></b></div>
+          <div><span data-en="Released" data-bn="প্রকাশ">Released</span>: <b data-rel="date"><span class="skeleton"></span></b></div>
+          <div><span data-en="Size" data-bn="আকার">Size</span>: <b data-rel="size"><span class="skeleton"></span></b></div>
+          <div>SHA-256: <b data-rel="sha"><span class="skeleton"></span></b></div>
+        </div>
+        <ul class="dl__notes" data-rel="notes"></ul>
       </div>
-    </section>
+      <ol class="steps">
+        <li><div><b data-en="Download the APK" data-bn="APK ডাউনলোড করুন">Download the APK</b><span data-en="Open this page on your Android phone and tap Download APK." data-bn="অ্যান্ড্রয়েড ফোনে এই পেজ খুলে APK ডাউনলোড চাপুন।">Open this page on your Android phone and tap Download APK.</span></div></li>
+        <li><div><b data-en="Allow the install" data-bn="ইনস্টলের অনুমতি দিন">Allow the install</b><span data-en="When Android asks, allow installs from your browser for this one file." data-bn="অ্যান্ড্রয়েড চাইলে এই একটি ফাইলের জন্য ব্রাউজার থেকে ইনস্টলের অনুমতি দিন।">When Android asks, allow installs from your browser for this one file.</span></div></li>
+        <li><div><b data-en="Open and sign in" data-bn="খুলুন ও সাইন ইন করুন">Open and sign in</b><span data-en="Use your staff ID and password. Everything works offline from the first launch." data-bn="স্টাফ আইডি ও পাসওয়ার্ড দিন। প্রথম চালু থেকেই সব অফলাইনে চলে।">Use your staff ID and password. Everything works offline from the first launch.</span></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
 
-    <section class="shelves section-pad" id="shelves">
-      <div class="wrap"><div class="section-intro"><div><span class="kicker">03 / INTERACTIVE SHELVES</span><h2 data-en="From search to shelf. In seconds." data-bn="সার্চ থেকে শেলফে। কয়েক সেকেন্ডে।">From search to shelf.<br>In seconds.</h2></div><p data-en="A digital map for your physical pharmacy, built for fast picking and better stock control." data-bn="দ্রুত ওষুধ খুঁজতে ও স্টক সামলাতে আপনার ফার্মেসির ডিজিটাল মানচিত্র।">A digital map for your physical pharmacy, built for fast picking and better stock control.</p></div>
-        <div class="shelf-layout"><div class="shelf-demo"><div class="shelf-demo-head"><span class="live-label"><i></i><span data-en="INTERACTIVE SHELF MAP" data-bn="ইন্টারঅ্যাকটিভ শেলফ ম্যাপ">INTERACTIVE SHELF MAP</span></span><span>A / 04</span></div><div class="shelf-map" role="group" aria-label="Interactive example shelf locations"><div class="shelf-ruler"><span>ZONE A</span><span>AISLE 04</span><span>SHELF 02</span></div><div class="shelf-cells"><button class="shelf-cell" type="button" data-location="A-04-S02-B01" data-item="Napa 500mg"><small>BIN 01</small><strong>Napa</strong><span>↗</span></button><button class="shelf-cell selected" type="button" data-location="A-04-S02-B02" data-item="Seclo 20mg"><small>BIN 02</small><strong>Seclo</strong><span>↗</span></button><button class="shelf-cell" type="button" data-location="A-04-S02-B03" data-item="Ace 500mg"><small>BIN 03</small><strong>Ace</strong><span>↗</span></button><button class="shelf-cell" type="button" data-location="A-04-S02-B04" data-item="Napa Extra"><small>BIN 04</small><strong>Napa Extra</strong><span>↗</span></button><button class="shelf-cell" type="button" data-location="A-04-S02-B05" data-item="Seclo 40mg"><small>BIN 05</small><strong>Seclo 40</strong><span>↗</span></button><button class="shelf-cell" type="button" data-location="A-04-S02-B06" data-item="Antacid"><small>BIN 06</small><strong>Antacid</strong><span>↗</span></button></div></div><div class="shelf-result"><div><small data-en="SELECTED LOCATION" data-bn="নির্বাচিত অবস্থান">SELECTED LOCATION</small><strong id="shelf-location">A-04-S02-B02</strong></div><div><small data-en="MEDICINE" data-bn="ওষুধ">MEDICINE</small><strong id="shelf-item">Seclo 20mg</strong></div><span class="result-check">✓</span></div><p class="demo-disclaimer" data-en="Interactive example of the mapping workflow. Bin data shown here is illustrative." data-bn="ম্যাপিং প্রক্রিয়ার উদাহরণ। এখানে দেখানো বিনের তথ্য নমুনা।">Interactive example of the mapping workflow. Bin data shown here is illustrative.</p></div>
-          <div class="shelf-story"><div class="shelf-real-phone"><img class="phone-image" src="./assets/screens/shelves.png" alt="Actual Interactive Shelves screen showing Add Zone, Add Bin and Map Medicine" loading="lazy" width="1280" height="2856"></div><div class="shelf-steps"><div><b>01</b><span data-en="Create zones and exact aisle, shelf and bin coordinates." data-bn="জোন, আইল, শেলফ ও বিনের নির্দিষ্ট অবস্থান তৈরি করুন।">Create zones and exact aisle, shelf and bin coordinates.</span></div><div><b>02</b><span data-en="Map medicines to physical locations; see the code during search." data-bn="ওষুধের অবস্থান ম্যাপ করুন; সার্চেই লোকেশন দেখুন।">Map medicines to physical locations; see the code during search.</span></div><div><b>03</b><span data-en="Use FEFO picking guidance to choose the earliest-expiring batch." data-bn="আগে মেয়াদ শেষ হবে এমন ব্যাচ বাছতে FEFO নির্দেশনা ব্যবহার করুন।">Use FEFO picking guidance to choose the earliest-expiring batch.</span></div></div></div></div>
-      </div>
-    </section>
-    <section class="ai-section section-pad" id="ai"><div class="wrap"><div class="ai-heading"><span class="kicker light">04 / AI &amp; SMART ASSISTANCE</span><h2 data-en="Less typing. More knowing." data-bn="কম টাইপিং। আরও বেশি জানা।">Less typing.<br>More knowing.</h2><p data-en="Practical intelligence inside the workflows your team already uses." data-bn="আপনার টিমের প্রতিদিনের কাজেই ব্যবহারিক স্মার্ট সহায়তা।">Practical intelligence inside the workflows your team already uses.</p></div><div class="ai-grid"><article class="ai-primary"><div class="ai-symbol">✳</div><span class="ai-label" data-en="AVAILABLE NOW / OCR" data-bn="এখনই আছে / OCR">AVAILABLE NOW / OCR</span><h3 data-en="Scan the box. Start the entry." data-bn="বক্স স্ক্যান করুন। এন্ট্রি শুরু করুন।">Scan the box.<br>Start the entry.</h3><p data-en="On-device OCR reads medicine packaging and suggests details for stock entry, with a person confirming the result." data-bn="ডিভাইসের OCR ওষুধের প্যাকেট পড়ে স্টক এন্ট্রির তথ্য সাজেস্ট করে; চূড়ান্ত করার আগে মানুষ যাচাই করেন।">On-device OCR reads medicine packaging and suggests details for stock entry, with a person confirming the result.</p><div class="ocr-visual"><div class="ocr-frame"><span class="ocr-corner tl"></span><span class="ocr-corner tr"></span><span class="ocr-corner bl"></span><span class="ocr-corner br"></span><div><small>PACKAGING SCAN</small><strong>Napa 500mg</strong><span>PARACETAMOL</span></div><div class="scan-beam"></div></div><div class="ocr-result"><span>✓</span><div><strong data-en="Text found" data-bn="লেখা পাওয়া গেছে">Text found</strong><small data-en="Review before saving" data-bn="সেভের আগে যাচাই করুন">Review before saving</small></div></div></div><small class="illustration-note" data-en="ILLUSTRATION OF OCR ASSISTANCE" data-bn="OCR সহায়তার উদাহরণ">ILLUSTRATION OF OCR ASSISTANCE</small></article><article class="ai-secondary"><span class="ai-icon">◉</span><span class="ai-label" data-en="AVAILABLE NOW / VOICE" data-bn="এখনই আছে / ভয়েস">AVAILABLE NOW / VOICE</span><h3 data-en="Speak in Bangla. Keep moving." data-bn="বাংলায় বলুন। কাজ চলুক।">Speak in Bangla.<br>Keep moving.</h3><p data-en="Bengali voice command entry turns spoken medicine and quantity requests into a reviewable cart suggestion." data-bn="বাংলা ভয়েস কমান্ডে ওষুধ ও পরিমাণ বললে কার্টে যোগ করার প্রস্তাব আসে; আগে যাচাই করা যায়।">Bengali voice command entry turns spoken medicine and quantity requests into a reviewable cart suggestion.</p><div class="voice-visual"><i></i><i></i><i></i><i></i><i></i><span>“Napa 2, Seclo 5”</span></div></article><article class="ai-secondary"><span class="ai-icon">⌕</span><span class="ai-label" data-en="AVAILABLE NOW / SUGGESTIONS" data-bn="এখনই আছে / সাজেশন">AVAILABLE NOW / SUGGESTIONS</span><h3 data-en="A helpful next answer." data-bn="পরের উত্তরটাও হাতের কাছে।">A helpful<br>next answer.</h3><p data-en="Typo-tolerant medicine search, related products and alternative brands help your team find a path when stock is tight." data-bn="ভুল বানান সহ্য করা সার্চ, সম্পর্কিত পণ্য ও বিকল্প ব্র্যান্ড কম স্টকের সময় দ্রুত সিদ্ধান্ত নিতে সাহায্য করে।">Typo-tolerant medicine search, related products and alternative brands help your team find a path when stock is tight.</p><div class="suggestion-visual"><span>নাপা</span><span>→</span><strong>Napa 500mg</strong><span>↗</span></div></article></div><div class="ai-future"><span class="future-badge" data-en="EXPLORING NEXT" data-bn="ভবিষ্যৎ পরিকল্পনা">EXPLORING NEXT</span><p data-en="Shelf-photo mapping is an optional concept in the product spec: a camera-assisted way to suggest bin locations, with staff confirmation before any mapping is saved." data-bn="শেলফের ছবি থেকে লোকেশন সাজেস্ট করার ধারণাটি স্পেকে ঐচ্ছিক ভবিষ্যৎ ফিচার; ম্যাপিং সেভের আগে স্টাফ নিশ্চিত করবেন।">Shelf-photo mapping is an optional concept in the product spec: a camera-assisted way to suggest bin locations, with staff confirmation before any mapping is saved.</p></div></div></section>
-    <section class="features section-pad" id="features"><div class="wrap"><div class="section-intro"><div><span class="kicker">05 / BUILT FOR THE WHOLE DAY</span><h2 data-en="More than a checkout screen." data-bn="শুধু বিলিংয়ের চেয়ে অনেক বেশি।">More than a<br>checkout screen.</h2></div><p data-en="An end-to-end toolkit, grounded in the features already implemented in the app." data-bn="অ্যাপে ইতোমধ্যে তৈরি ফিচার নিয়ে ফার্মেসির প্রতিদিনের পূর্ণ টুলকিট।">An end-to-end toolkit, grounded in the features already implemented in the app.</p></div><div class="feature-atlas"><article><span>01 / COUNTER</span><h3 data-en="Serve faster" data-bn="দ্রুত বিক্রি">Serve faster</h3><ul><li data-en="Fuzzy Bangla and English medicine search" data-bn="বাংলা ও ইংরেজিতে ফাজি সার্চ">Fuzzy Bangla and English medicine search</li><li data-en="Loose tablets, strips and boxes" data-bn="খুচরা ট্যাবলেট, স্ট্রিপ ও বক্স">Loose tablets, strips and boxes</li><li data-en="Hold and resume sales" data-bn="বিক্রি থামিয়ে আবার শুরু">Hold and resume sales</li><li data-en="Cash, bKash, Nagad and credit" data-bn="নগদ, বিকাশ, নগদ ও বাকি">Cash, bKash, Nagad and credit</li></ul></article><article><span>02 / STOCK</span><h3 data-en="Stay ready" data-bn="স্টক প্রস্তুত">Stay ready</h3><ul><li data-en="Batch tracking and FEFO deduction" data-bn="ব্যাচ ট্র্যাকিং ও FEFO হিসাব">Batch tracking and FEFO deduction</li><li data-en="Low-stock and expiry alerts" data-bn="কম স্টক ও মেয়াদ সতর্কতা">Low-stock and expiry alerts</li><li data-en="Barcode and OCR-assisted intake" data-bn="বারকোড ও OCR দিয়ে স্টক এন্ট্রি">Barcode and OCR-assisted intake</li><li data-en="Reorder and dead-stock signals" data-bn="রিঅর্ডার ও ডেড-স্টক সংকেত">Reorder and dead-stock signals</li></ul></article><article><span>03 / PEOPLE</span><h3 data-en="Keep accounts clear" data-bn="হিসাব পরিষ্কার">Keep accounts clear</h3><ul><li data-en="Customer due ledger and reminders" data-bn="কাস্টমারের বাকি ও রিমাইন্ডার">Customer due ledger and reminders</li><li data-en="Supplier purchases and payment tracking" data-bn="সাপ্লায়ার ক্রয় ও পেমেন্ট ট্র্যাকিং">Supplier purchases and payment tracking</li><li data-en="Staff roles, shifts and activity log" data-bn="স্টাফ রোল, শিফট ও কার্যক্রম লগ">Staff roles, shifts and activity log</li><li data-en="Receipts by print, PDF and WhatsApp" data-bn="প্রিন্ট, PDF ও হোয়াটসঅ্যাপে রিসিট">Receipts by print, PDF and WhatsApp</li></ul></article><article><span>04 / OWNER</span><h3 data-en="See the full picture" data-bn="পুরো চিত্র দেখুন">See the full picture</h3><ul><li data-en="Daily Galla and sales reports" data-bn="দৈনিক গাল্লা ও বিক্রির রিপোর্ট">Daily Galla and sales reports</li><li data-en="Profit, expiry and stock reports" data-bn="লাভ, মেয়াদ ও স্টক রিপোর্ট">Profit, expiry and stock reports</li><li data-en="Multi-branch dashboard and transfers" data-bn="মাল্টি-ব্রাঞ্চ ড্যাশবোর্ড ও ট্রান্সফার">Multi-branch dashboard and transfers</li><li data-en="Offline operation with cloud sync" data-bn="অফলাইন কাজ ও ক্লাউড সিঙ্ক">Offline operation with cloud sync</li></ul></article></div><div class="capability-cloud" aria-label="More implemented capabilities"><span class="cloud-title" data-en="AND THERE'S MORE" data-bn="আরও আছে">AND THERE'S MORE</span><span data-en="Bluetooth thermal printing" data-bn="ব্লুটুথ থার্মাল প্রিন্ট">Bluetooth thermal printing</span><span data-en="PDF receipts" data-bn="PDF রিসিট">PDF receipts</span><span data-en="Barcode lookup" data-bn="বারকোড সার্চ">Barcode lookup</span><span data-en="Expiry heatmap" data-bn="মেয়াদের হিটম্যাপ">Expiry heatmap</span><span data-en="Shelf picking guide" data-bn="শেলফ পিকিং গাইড">Shelf picking guide</span><span data-en="Purchase price history" data-bn="ক্রয়মূল্যের ইতিহাস">Purchase price history</span><span data-en="Supplier performance" data-bn="সাপ্লায়ারের পারফরম্যান্স">Supplier performance</span><span data-en="Shift handover" data-bn="শিফট হ্যান্ডওভার">Shift handover</span><span data-en="Activity audit trail" data-bn="কার্যক্রম অডিট ট্রেইল">Activity audit trail</span><span data-en="Branch stock transfer" data-bn="শাখার স্টক ট্রান্সফার">Branch stock transfer</span><span data-en="Cloud sync" data-bn="ক্লাউড সিঙ্ক">Cloud sync</span><span data-en="Compliance purchase logs" data-bn="কমপ্লায়েন্স ক্রয় লগ">Compliance purchase logs</span><span data-en="Customer reminders" data-bn="কাস্টমার রিমাইন্ডার">Customer reminders</span><span data-en="Advanced analytics" data-bn="অ্যাডভান্সড অ্যানালিটিক্স">Advanced analytics</span></div><div class="feature-bottom"><span data-en="ONE APP. THE ENTIRE PHARMACY." data-bn="এক অ্যাপ। পুরো ফার্মেসি।">ONE APP. THE ENTIRE PHARMACY.</span><a href="#pricing" data-en="Find your plan ↗" data-bn="আপনার প্ল্যান দেখুন ↗">Find your plan ↗</a></div></div></section>
+<!-- faq -->
+<section class="pad" id="faq" aria-labelledby="faq-title">
+  <div class="wrap">
+    <h2 id="faq-title" class="h2 rv" style="margin-bottom:2rem" data-en="Good to know." data-bn="জেনে রাখুন।">Good to know.</h2>
+    <div class="faq rv">
+      <details><summary><span data-en="Will it work without internet?" data-bn="ইন্টারনেট ছাড়া কি চলবে?">Will it work without internet?</span><i class="ph ph-plus" aria-hidden="true"></i></summary><p data-en="Yes. Billing, stock and reports work offline on your Android device. Changes upload in the background when you are online." data-bn="হ্যাঁ। বিলিং, স্টক ও রিপোর্ট আপনার অ্যান্ড্রয়েড ডিভাইসে অফলাইনে চলে। অনলাইনে থাকলে পরিবর্তন পেছনে আপলোড হয়।">Yes. Billing, stock and reports work offline on your Android device. Changes upload in the background when you are online.</p></details>
+      <details><summary><span data-en="Can I sell a few tablets from a strip?" data-bn="স্ট্রিপ থেকে কয়েকটি ট্যাবলেট বিক্রি করা যাবে?">Can I sell a few tablets from a strip?</span><i class="ph ph-plus" aria-hidden="true"></i></summary><p data-en="Yes. Loose-unit selling is part of the Starter plan and above, with automatic price conversion." data-bn="হ্যাঁ। খুচরা বিক্রি স্টার্টার প্ল্যান থেকেই আছে, দাম নিজে নিজে হিসাব হয়।">Yes. Loose-unit selling is part of the Starter plan and above, with automatic price conversion.</p></details>
+      <details><summary><span data-en="Is there a free trial?" data-bn="ফ্রি ট্রায়াল আছে?">Is there a free trial?</span><i class="ph ph-plus" aria-hidden="true"></i></summary><p data-en="Every plan starts with a 30-day free trial. Message us on WhatsApp to get started and confirm current terms." data-bn="প্রতিটি প্ল্যানে ৩০ দিনের ফ্রি ট্রায়াল আছে। শুরু করতে ও বর্তমান শর্ত জানতে হোয়াটসঅ্যাপে মেসেজ করুন।">Every plan starts with a 30-day free trial. Message us on WhatsApp to get started and confirm current terms.</p></details>
+      <details><summary><span data-en="Where do I get the Android app?" data-bn="অ্যান্ড্রয়েড অ্যাপ কোথায় পাব?">Where do I get the Android app?</span><i class="ph ph-plus" aria-hidden="true"></i></summary><p data-en="Use the Download APK button above. Every build is also listed on the releases page." data-bn="উপরের APK ডাউনলোড বোতাম ব্যবহার করুন। প্রতিটি বিল্ড রিলিজ পেজেও আছে।">Use the Download APK button above. Every build is also listed on the releases page.</p></details>
+    </div>
+    <div class="hero__cta rv" style="margin-top:2.2rem">
+      <a class="btn btn--primary" href="https://wa.me/8801729730106"><i class="ph ph-whatsapp-logo" aria-hidden="true"></i><span data-en="Chat on WhatsApp" data-bn="হোয়াটসঅ্যাপে চ্যাট">Chat on WhatsApp</span></a>
+      <a class="btn btn--ghost" href="tel:+8801729730106"><i class="ph ph-phone" aria-hidden="true"></i><span data-en="Call us" data-bn="কল করুন">Call us</span></a>
+    </div>
+  </div>
+</section>
 
-    <section class="quote-band"><div class="wrap quote-grid"><span class="quote-mark">“</span><p data-en="Less time finding answers. More time caring for the people on the other side of the counter." data-bn="হিসাব খুঁজতে কম সময়। কাউন্টারের ওপারের মানুষটির জন্য আরও বেশি সময়।">Less time finding answers. More time caring for the people on the other side of the counter.</p><span class="quote-flower">✳</span></div></section>
+</main>
 
-    <section class="pricing section-pad" id="pricing"><div class="wrap"><div class="section-intro"><div><span class="kicker">04 / SIMPLE PRICING</span><h2 data-en="Room to grow. A plan to match." data-bn="বড় হোন নিজের গতিতে।">Room to grow.<br>A plan to match.</h2></div><p data-en="Start with a 30-day free trial. All plans include offline operation and setup support." data-bn="৩০ দিনের বিনামূল্যের ট্রায়াল দিয়ে শুরু করুন। সব প্ল্যানে অফলাইন কাজ ও সেটআপ সাপোর্ট আছে।">Start with a 30-day free trial. All plans include offline operation and setup support.</p></div><div class="pricing-grid"><article class="plan"><span class="plan-tag" data-en="FOR THE EVERYDAY COUNTER" data-bn="প্রতিদিনের কাউন্টারের জন্য">FOR THE EVERYDAY COUNTER</span><h3>Starter</h3><p data-en="Everything a small pharmacy needs to begin." data-bn="শুরু করার জন্য ছোট ফার্মেসির প্রয়োজনীয় সবকিছু।">Everything a small pharmacy needs to begin.</p><div class="plan-price">৳499 <span data-en="/ month" data-bn="/ মাস">/ month</span></div><a href="https://wa.me/8801729730106?text=I%20want%20to%20start%20PharmaOneBD%20Starter%20trial" target="_blank" rel="noopener noreferrer" class="plan-button"><span data-en="Start free trial" data-bn="বিনামূল্যে শুরু করুন">Start free trial</span> ↗</a><ul><li data-en="Unlimited billing and loose unit sales" data-bn="সীমাহীন বিলিং ও খুচরা বিক্রি">Unlimited billing and loose unit sales</li><li data-en="Basic stock tracking" data-bn="বেসিক স্টক ট্র্যাকিং">Basic stock tracking</li><li data-en="2 staff accounts" data-bn="২টি স্টাফ অ্যাকাউন্ট">2 staff accounts</li><li data-en="Daily sales summary and PDF receipts" data-bn="দৈনিক বিক্রির হিসাব ও PDF রিসিট">Daily sales summary and PDF receipts</li></ul></article><article class="plan featured-plan"><div class="popular" data-en="THE GROWTH FAVORITE" data-bn="বাড়তে থাকা ব্যবসার জন্য">THE GROWTH FAVORITE</div><span class="plan-tag" data-en="FOR GROWING PHARMACIES" data-bn="বাড়তে থাকা ফার্মেসির জন্য">FOR GROWING PHARMACIES</span><h3>Pro</h3><p data-en="More visibility for a busier pharmacy." data-bn="ব্যস্ত ফার্মেসির জন্য আরও বেশি নিয়ন্ত্রণ।">More visibility for a busier pharmacy.</p><div class="plan-price">৳999 <span data-en="/ month" data-bn="/ মাস">/ month</span></div><a href="https://wa.me/8801729730106?text=I%20want%20to%20start%20PharmaOneBD%20Pro%20trial" target="_blank" rel="noopener noreferrer" class="plan-button"><span data-en="Start free trial" data-bn="বিনামূল্যে শুরু করুন">Start free trial</span> ↗</a><ul><li data-en="Everything in Starter" data-bn="স্টার্টারের সবকিছু">Everything in Starter</li><li data-en="Expiry and low-stock alerts" data-bn="মেয়াদ ও কম স্টকের সতর্কতা">Expiry and low-stock alerts</li><li data-en="Customer dues, suppliers and cloud backup" data-bn="কাস্টমারের বাকি, সাপ্লায়ার ও ক্লাউড ব্যাকআপ">Customer dues, suppliers and cloud backup</li><li data-en="Profit reports and up to 10 staff" data-bn="লাভের রিপোর্ট ও ১০ জন পর্যন্ত স্টাফ">Profit reports and up to 10 staff</li></ul></article><article class="plan"><span class="plan-tag" data-en="FOR MULTIPLE BRANCHES" data-bn="একাধিক শাখার জন্য">FOR MULTIPLE BRANCHES</span><h3>Enterprise</h3><p data-en="One connected view across your locations." data-bn="সব শাখার হিসাব এক জায়গায়।">One connected view across your locations.</p><div class="plan-price">৳2,499 <span data-en="/ month" data-bn="/ মাস">/ month</span></div><a href="tel:+8801729730106" class="plan-button"><span data-en="Talk to us" data-bn="যোগাযোগ করুন">Talk to us</span> ↗</a><ul><li data-en="Everything in Pro" data-bn="প্রো-এর সবকিছু">Everything in Pro</li><li data-en="Up to 10 branches and stock transfers" data-bn="১০টি পর্যন্ত শাখা ও স্টক ট্রান্সফার">Up to 10 branches and stock transfers</li><li data-en="Central owner dashboard" data-bn="কেন্দ্রীয় মালিক ড্যাশবোর্ড">Central owner dashboard</li><li data-en="Unlimited staff and priority support" data-bn="সীমাহীন স্টাফ ও অগ্রাধিকার সাপোর্ট">Unlimited staff and priority support</li></ul></article></div><p class="pricing-footnote" data-en="Prices in BDT. Trial and plan details are based on the current PharmaOneBD product page; confirm the latest offer before subscribing." data-bn="মূল্য বাংলাদেশি টাকায়। ট্রায়াল ও প্ল্যানের তথ্য বর্তমান PharmaOneBD পেজ অনুযায়ী; সাবস্ক্রাইব করার আগে সর্বশেষ অফার নিশ্চিত করুন।">Prices in BDT. Trial and plan details are based on the current PharmaOneBD product page; confirm the latest offer before subscribing.</p></div></section>
-
-    <section class="faq section-pad" id="faq"><div class="wrap faq-grid"><div><span class="kicker">05 / GOOD TO KNOW</span><h2 data-en="A few things you might be wondering." data-bn="আপনার কিছু প্রশ্নের উত্তর।">A few things<br>you might be<br>wondering.</h2><p data-en="Still curious? We're one message away." data-bn="আরও জানতে চান? আমাদের মেসেজ করুন।">Still curious? We're one message away.</p><a class="text-link" href="https://wa.me/8801729730106" target="_blank" rel="noopener noreferrer"><span data-en="Chat on WhatsApp" data-bn="হোয়াটসঅ্যাপে কথা বলুন">Chat on WhatsApp</span> ↗</a></div><div class="faq-list"><details><summary><span data-en="Will it work without internet?" data-bn="ইন্টারনেট ছাড়া কি কাজ করবে?">Will it work without internet?</span><span class="faq-plus">+</span></summary><p data-en="Yes. The product page states that billing, stock and reports work offline on your Android device." data-bn="হ্যাঁ। পণ্যের তথ্য অনুযায়ী, অ্যান্ড্রয়েড ডিভাইসে বিলিং, স্টক ও রিপোর্ট অফলাইনে কাজ করে।">Yes. The product page states that billing, stock and reports work offline on your Android device.</p></details><details><summary><span data-en="Can I sell a few tablets from a strip?" data-bn="স্ট্রিপ থেকে কয়েকটি ট্যাবলেট বিক্রি করা যাবে?">Can I sell a few tablets from a strip?</span><span class="faq-plus">+</span></summary><p data-en="Yes. Loose unit selling is part of the Starter plan and above." data-bn="হ্যাঁ। স্টার্টার এবং তার ওপরের প্ল্যানে খুচরা ট্যাবলেট বিক্রি করা যায়।">Yes. Loose unit selling is part of the Starter plan and above.</p></details><details><summary><span data-en="Is there a free trial?" data-bn="বিনামূল্যে ট্রায়াল আছে?">Is there a free trial?</span><span class="faq-plus">+</span></summary><p data-en="The current product page offers a 30-day free trial on every plan. Contact the team to get started and confirm current terms." data-bn="বর্তমান পণ্যের পেজে সব প্ল্যানে ৩০ দিনের বিনামূল্যের ট্রায়াল আছে। শুরু করতে ও বর্তমান শর্ত জানতে যোগাযোগ করুন।">The current product page offers a 30-day free trial on every plan. Contact the team to get started and confirm current terms.</p></details><details><summary><span data-en="Where can I get the Android app?" data-bn="অ্যান্ড্রয়েড অ্যাপ কোথায় পাব?">Where can I get the Android app?</span><span class="faq-plus">+</span></summary><p><span data-en="Check the official release repository for available builds, or ask the team for the right installer." data-bn="অফিশিয়াল রিলিজ রিপোজিটরিতে বিল্ড দেখুন, অথবা সঠিক ইনস্টলার জানতে টিমকে জিজ্ঞেস করুন।">Check the official release repository for available builds, or ask the team for the right installer.</span> <a href="https://github.com/shamimsdp/PharmaOneBD-releases/releases" target="_blank" rel="noopener noreferrer" data-en="View releases ↗" data-bn="রিলিজ দেখুন ↗">View releases ↗</a></p></details></div></div></section>
-
-    <section class="final-cta section-pad"><div class="wrap final-inner"><div class="final-spark">✳</div><span class="kicker light" data-en="YOUR NEXT CHAPTER STARTS HERE" data-bn="নতুন শুরু এখান থেকেই">YOUR NEXT CHAPTER STARTS HERE</span><h2 data-en="A better day at your pharmacy starts now." data-bn="আপনার ফার্মেসির সহজ দিন শুরু হোক আজ।">A better day at your<br>pharmacy starts now.</h2><p data-en="Try PharmaOneBD for 30 days. Bring your team, your stock and your ambitions." data-bn="৩০ দিনের জন্য PharmaOneBD ব্যবহার করে দেখুন। আপনার টিম, স্টক আর স্বপ্ন নিয়ে এগিয়ে চলুন।">Try PharmaOneBD for 30 days. Bring your team, your stock and your ambitions.</p><a class="button button-cream" href="https://wa.me/8801729730106?text=I%20want%20to%20start%20PharmaOneBD%20trial" target="_blank" rel="noopener noreferrer"><span data-en="Start your free trial" data-bn="বিনামূল্যে ট্রায়াল শুরু করুন">Start your free trial</span> ↗</a><div class="final-orbit" aria-hidden="true"></div></div></section>
-  </main>
-  <footer><div class="wrap footer-grid"><div><a class="brand footer-brand" href="#top"><span class="brand-mark"><span>+</span></span><span>pharma<span class="brand-one">one</span><span class="brand-bd">bd</span></span></a><p data-en="A more considered way to run your pharmacy." data-bn="আপনার ফার্মেসি চালানোর আরও সহজ উপায়।">A more considered way to run your pharmacy.</p></div><div class="footer-links"><a href="#features" data-en="Features" data-bn="ফিচার">Features</a><a href="#screens" data-en="App screens" data-bn="অ্যাপ স্ক্রিন">Experience</a><a href="#pricing" data-en="Pricing" data-bn="মূল্য">Pricing</a><a href="#faq">FAQ</a></div><div class="footer-links"><a href="https://github.com/shamimsdp/PharmaOneBD-releases/releases" target="_blank" rel="noopener noreferrer" data-en="App releases ↗" data-bn="অ্যাপ রিলিজ ↗">App releases ↗</a><a href="https://wa.me/8801729730106" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a><a href="tel:+8801729730106" data-en="Call us ↗" data-bn="ফোন করুন ↗">Call us ↗</a></div></div><div class="wrap footer-bottom"><span>© <span id="year">2026</span> PharmaOneBD</span><span data-en="Built for Bangladesh, with care." data-bn="বাংলাদেশের জন্য, যত্ন নিয়ে তৈরি।">Built for Bangladesh, with care.</span><a href="#top" data-en="Back to top ↑" data-bn="উপরে যান ↑">Back to top ↑</a></div></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/common.js"></script>
+<script src="js/shelf3d.js"></script>
+<script src="js/home.js"></script>
 </body>
 </html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reports | PharmaOneBD</title>
+<meta name="description" content="All 25 PharmaOneBD reports: daily sales, Galla, profit, best sellers, expiry, dead stock, customer dues, supplier and staff performance, and compliance logs.">
+<meta name="theme-color" content="#08120e">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Hind+Siliguri:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body data-page="reports">
+<main id="main">
+  <header class="page-hero">
+    <div class="wrap">
+      <h1 class="display" data-en="Every report, one tap away." data-bn="প্রতিটি রিপোর্ট, এক ট্যাপ দূরে।">Every report, one tap away.</h1>
+      <p class="lede"><span id="total-reports">25</span> <span data-en="reports inside the app, named in Bangla, built for the questions pharmacy owners actually ask." data-bn="টি রিপোর্ট অ্যাপের ভেতরেই, বাংলা নামে, ফার্মেসি মালিকদের আসল প্রশ্নের উত্তরে।">reports inside the app, named in Bangla, built for the questions pharmacy owners actually ask.</span></p>
+      <div class="toolbar">
+        <label class="search"><span class="sr-only" data-en="Search reports" data-bn="রিপোর্ট সার্চ">Search reports</span><i class="ph ph-magnifying-glass" aria-hidden="true"></i>
+          <input id="q" type="search" autocomplete="off" data-en="Search reports, for example profit or expiry" data-bn="রিপোর্ট সার্চ করুন, যেমন লাভ বা মেয়াদ" data-attr="placeholder" placeholder="Search reports, for example profit or expiry"></label>
+        <div class="tabs" id="tabs" role="group" aria-label="Report categories"></div>
+      </div>
+    </div>
+  </header>
+  <div class="wrap rep-split">
+    <div id="reports"></div>
+    <aside class="rep-phones" aria-hidden="true">
+      <div class="phone">
+        <img src="assets/screens/reports.png" alt="" width="404" height="864">
+        <img src="assets/screens/report2.png" alt="" width="404" height="864" loading="lazy">
+        <img src="assets/screens/report3.png" alt="" width="404" height="864" loading="lazy">
+      </div>
+    </aside>
+  </div>
+</main>
+<noscript><p class="wrap" style="padding:2rem 0">This page needs JavaScript to list the reports. The full list is also in the app.</p></noscript>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/common.js"></script>
+<script src="js/pages.js"></script>
+</body>
+</html>
