@@ -142,7 +142,7 @@ section { position: relative; }
 .showcase { padding-block: clamp(4rem, 8vw, 7rem); }
 .showcase__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 420px); gap: clamp(2rem, 6vw, 6rem); align-items: start; }
 .chapters { display: grid; gap: 0; }
-.chapter { min-height: 62vh; display: flex; flex-direction: column; justify-content: center; padding-block: 3rem; opacity: .38; transition: opacity .4s; }
+.chapter { min-height: 54vh; display: flex; flex-direction: column; justify-content: center; padding-block: 3rem; transition: opacity .4s; }
 .chapter.is-active { opacity: 1; }
 .chapter h3 { font-size: clamp(1.7rem, 3.2vw, 2.6rem); font-weight: 600; letter-spacing: -.03em; line-height: 1.1; max-width: 16ch; }
 html[lang='bn'] .chapter h3 { line-height: 1.25; letter-spacing: 0; }
@@ -150,8 +150,9 @@ html[lang='bn'] .chapter h3 { line-height: 1.25; letter-spacing: 0; }
 .chapter ul { list-style: none; padding: 0; margin: 1.4rem 0 0; display: grid; gap: .5rem; }
 .chapter li { display: flex; gap: .7rem; color: var(--text); font-size: 1rem; }
 .chapter li i { color: var(--accent); margin-top: .22rem; flex: none; }
-.stage { position: sticky; top: calc(50vh - 340px); height: 680px; }
-.stage .phone { position: absolute; inset: 0 auto auto 50%; width: 330px; translate: -50% 0; }
+/* mobile first: compact opaque band, cropped phone, text scrolls under it */
+.stage { position: sticky; top: var(--nav-h); z-index: 10; order: -1; height: 230px; overflow: hidden; background: var(--bg); border-bottom: 1px solid var(--line); }
+.stage .phone { position: absolute; inset: 14px auto auto 50%; width: 170px; translate: -50% 0; }
 .stage .phone img { opacity: 0; transition: opacity .6s; }
 .stage .phone img.is-on { opacity: 1; }
 
@@ -166,9 +167,10 @@ html[lang='bn'] .chapter h3 { line-height: 1.25; letter-spacing: 0; }
 html[lang='bn'] .moment h3 { line-height: 1.25; letter-spacing: 0; }
 .moment p { color: var(--muted); margin-top: 1rem; }
 .moment .phone { width: min(100%, 220px); justify-self: center; max-height: 100%; }
-.is-static .day__pin { height: auto; padding-block: 3rem 4rem; }
-.is-static .day__track { overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 1rem; }
-.is-static .moment { scroll-snap-align: start; }
+.is-static .day__pin, .is-static-day .day__pin { height: auto; padding-block: 2.5rem 3.5rem; }
+.is-static .day__track, .is-static-day .day__track { overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 1rem; padding-bottom: 1rem; scrollbar-width: none; }
+.is-static .day__track::-webkit-scrollbar, .is-static-day .day__track::-webkit-scrollbar { display: none; }
+.is-static .moment, .is-static-day .moment { scroll-snap-align: start; }
 
 /* bento modules */
 .bento { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1rem; }
@@ -318,9 +320,6 @@ html[lang='bn'] .moment h3 { line-height: 1.25; letter-spacing: 0; }
   .hero::after { background: linear-gradient(180deg, color-mix(in srgb, var(--bg) 88%, transparent) 0%, color-mix(in srgb, var(--bg) 55%, transparent) 60%, transparent 100%); }
   .hero__phones { justify-self: center; width: min(100%, 380px); margin-top: 1rem; }
   .showcase__grid { position: relative; }
-  .stage { position: sticky; top: calc(var(--nav-h) + 12px); height: 460px; z-index: 10; order: -1; }
-  .stage .phone { width: 220px; }
-  .chapter { min-height: 54vh; opacity: 1; }
   .facts__row { grid-template-columns: repeat(2, 1fr); }
   .fact:nth-child(3) { border-left: 0; padding-left: 0; }
   .fact { border-top: 1px solid var(--line); }
@@ -337,7 +336,8 @@ html[lang='bn'] .moment h3 { line-height: 1.25; letter-spacing: 0; }
   .plan ul { grid-column: 1 / -1; }
   .plan .btn { grid-column: 1 / -1; }
   .split { grid-template-columns: minmax(0, 1fr); }
-  .rail { position: static; display: flex; overflow-x: auto; max-height: none; padding-bottom: .5rem; gap: .4rem; }
+  .rail { position: static; display: flex; overflow-x: auto; max-height: none; padding-bottom: .5rem; gap: .4rem; scrollbar-width: none; }
+  .rail::-webkit-scrollbar { display: none; }
   .rail a { flex: none; border: 1px solid var(--line); border-radius: 999px; }
   .rep-phones { display: none; }
 }
@@ -348,8 +348,12 @@ html[lang='bn'] .moment h3 { line-height: 1.25; letter-spacing: 0; }
   .cell--c, .cell--d, .cell--e, .cell--f, .cell--h { grid-column: span 6; }
   .reports-tease ol { columns: 1; }
   .hero__cta .btn { flex: 1 1 100%; }
-  .stage { height: 380px; }
-  .stage .phone { width: 180px; }
+}
+@media (min-width: 1021px) {
+  .stage { top: calc(50vh - 340px); height: 680px; order: 0; z-index: 1; overflow: visible; background: none; border: 0; }
+  .stage .phone { inset: 0 auto auto 50%; width: 330px; }
+  .chapter { min-height: 62vh; opacity: .38; }
+  .chapter.is-active { opacity: 1; }
 }
 
 @media (prefers-reduced-motion: reduce) {

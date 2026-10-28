@@ -94,9 +94,6 @@
       });
       mm.add('(max-width: 720px)', function () {
         document.documentElement.classList.add('is-static-day');
-        pin.style.height = 'auto'; pin.style.paddingBlock = '2.5rem 3.5rem';
-        track.style.overflowX = 'auto'; track.style.scrollSnapType = 'x mandatory';
-        track.querySelectorAll('.moment').forEach(function (m) { m.style.scrollSnapAlign = 'start'; });
       });
     }
 
